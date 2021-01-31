@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>gentoo@nephros.org</email>
+		<name>Peter Gantner</name>
+	</maintainer>
+	<maintainer type="project">
+		<email>proxy-maint@gentoo.org</email>
+		<name>Proxy Maintainers</name>
+	</maintainer>
+<!--
+<longdescription>Long description of the package</longdescription>
+-->
+<use>
+	<flag name="vi">Install a version of the vi editor.</flag>
+	<flag name="calendar">Install <pkg>x11-misc-/xcalendar</pkg>.</flag>
+	<flag name="mozilla">Install a Mozilla browser. If not set, <pkg>www-client/dillo</pkg> will be selected instead.</flag>
+</use>
+</pkgmetadata>
