@@ -39,18 +39,20 @@ src_compile() {
 	epatch "${FILESDIR}"/fvwm1_1.24r-57.patch
 	emake || die
 	mv -v fvwm/fvwm.man fvwm/fvwm.1
+	mv -v fvwm/fvwm fvwm/fvwm1
 }
 
 src_install () {
-	into /usr
-	dobin fvwm/fvwm
+	dobin fvwm/fvwm1
 	doman fvwm/fvwm.1
 	dodoc documentation/*
-	dodir /usr/lib/X11
-	dodir /usr/lib/X11/fvwm
-	insinto /usr/lib/X11/fvwm
-	exeinto /usr/lib/X11/fvwm
+
+	dodir /etc/X11/fvwm1
+	insinto /etc/X11/fvwm1
 	doins sample.fvwmrc/system.fvwmrc
+
+	dodir /usr/share/fvwm1
+	exeinto /usr/share/fvwm1
 	doexe modules/GoodStuff/GoodStuff
 	doexe modules/FvwmIdent/FvwmIdent
 	doexe modules/FvwmDebug/FvwmDebug
@@ -65,15 +67,15 @@ src_install () {
 	doexe modules/FvwmAuto/FvwmAuto
 	doexe modules/FvwmWinList/FvwmWinList
 	doexe modules/FvwmBanner/FvwmBanner
-	insinto /usr/lib/X11
-	exeinto /usr/lib/X11
+
+	exeinto /usr/share/fvwm1
 	doexe xpmroot/xpmroot
-	dodir /usr/include
-	dodir /usr/include/X11
-	dodir /usr/include/X11/pixmaps
-	dodir /usr/include/X11/bitmaps
-	insinto /usr/include/X11/pixmaps
+
+	dodir /usr/share/pixmaps
+	insinto /usr/share/pixmaps
 	doins fvwm_icons/*.xpm
+	
+	dodir /usr/include/X11/bitmaps
 	insinto /usr/include/X11/bitmaps
 	doins fvwm_icons/*.xbm
 	doins fvwm_icons/*.bitmap
