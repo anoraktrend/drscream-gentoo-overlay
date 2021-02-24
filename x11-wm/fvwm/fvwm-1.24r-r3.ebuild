@@ -24,22 +24,21 @@ DEPEND="x11-libs/libX11
 	x11-libs/libXpm
 	x11-misc/xbitmaps"
 
+PATCHES=(
+	"${FILESDIR}"/fvwm1_1.24r-57.patch
+)
+
 src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
 
 }
 
-src_configure() {
-	append-cflags -fcommon
-	default
-}
-
 src_compile() {
 	xmkmf -a
+	epatch "${FILESDIR}"/fvwm1_1.24r-57.patch
 	emake || die
 	mv -v fvwm/fvwm.man fvwm/fvwm.1
-
 }
 
 src_install () {
