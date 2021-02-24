@@ -30,6 +30,11 @@ src_unpack() {
 
 }
 
+src_configure() {
+	append-cflags -fcommon
+	default
+}
+
 src_compile() {
 	xmkmf -a
 	emake || die
