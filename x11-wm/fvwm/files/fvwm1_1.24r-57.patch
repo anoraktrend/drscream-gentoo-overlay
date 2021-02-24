@@ -3019,9 +3019,9 @@
 +# Module path and paths to the icons
 +#
 +# ModulePath is a colon-separated list, just like regular unix PATH
-+ModulePath /usr/lib/fvwm
-+PixmapPath /usr/local/share/images:/usr/local/share/icons:/usr/share/images:/usr/share/icons:/usr/share/pixmaps:/usr/include/X11/pixmaps:/usr/include/X11/bitmaps:/usr/X11R6/include/bitmaps
-+IconPath   /usr/local/share/images:/usr/local/share/icons:/usr/share/images:/usr/share/icons:/usr/share/pixmaps:/usr/include/X11/pixmaps:/usr/include/X11/bitmaps:/usr/X11R6/include/bitmaps
++ModulePath /usr/share/fvwm1
++PixmapPath /usr/local/share/images:/usr/local/share/icons:/usr/share/images:/usr/share/icons:/usr/share/pixmaps:/usr/include/X11/pixmaps:/usr/include/X11/bitmaps
++IconPath   /usr/local/share/images:/usr/local/share/icons:/usr/share/images:/usr/share/icons:/usr/share/pixmaps:/usr/include/X11/pixmaps:/usr/include/X11/bitmaps
 +
 +############################################################################
 +# Set the decoration styles and window options
