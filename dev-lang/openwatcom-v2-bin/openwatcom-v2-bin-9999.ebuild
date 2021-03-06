@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 
 DEPEND="
 	net-misc/wget
-	games-emulation/dosbox
+	|| ( games-emulation/dosbox games-emulation/dosbox-x )
 "
 
 S="${WORKDIR}/watcom"
