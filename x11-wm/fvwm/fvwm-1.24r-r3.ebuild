@@ -4,6 +4,7 @@
 # This is the ancient version of fvwm that I like to use.
 # It is NOT compatible with fvwm-2
 
+EAPI=7
 inherit eutils
 
 IUSE=""
